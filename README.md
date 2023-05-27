@@ -25,13 +25,13 @@
 |**날짜**|**진행 사항**|
 |:-:|-|
 |2023-05-10|- `Fruit`, `Ingredient`, `JuiceMenu` 타입 생성<br>- `FruitStore` 내에 프로퍼티, 초기화, 메서드 생성<br>- `JuiceMenu`에 `recipe` 연산 프로퍼티 추가|
-|2023-05-11|- `Fruit에` `CaseIterable` 프로토콜 채택<br>- `FruitStore`의 초기화 수정<br>- `FruitStore` 내의 메서드명 변경<br>- `JuiceMaker`에 쥬스 제작 메서드 생성<br>- `JuiceMaker`의 `make` 메서드에서 재료 검사하는 기능 분리<br>- `JuiceError` 타입 생성<br>- 접근제한자 추가|
-|2023-05-16|- `FruitStoreViewController` 추가<br>- `Alert`에서 '예' 터치시 `FruitStoreViewController`로 이동하는 기능 추가<br>- 쥬스 제작 완료 시 과일 레이블에 수량 표기 변경<br>- `JuiceMenu`에 `name` 연산 프로퍼티 추가<br>- 중복되는 액션 정리 및 `JuiceMenu`의 타입 `Int`로 지정<br>- 에러 처리 모델에서 컨트롤러로 이동<br>- 컨트롤러 및 메서드, 프로퍼티명 변경<br>- 접근제한자 추가|
+|2023-05-11|- `Fruit에` `CaseIterable` 프로토콜 채택<br>- `FruitStore`의 초기화 수정<br>- `JuiceMaker`에 쥬스 제작 메서드 생성<br>- `JuiceMaker`의 `make` 메서드에서 재료 검사하는 기능 분리<br>- `JuiceError` 타입 생성<br>- 접근제한자 추가|
+|2023-05-16|- `FruitStoreViewController` 추가<br>- `Alert`에서 '예' 터치시 `FruitStoreViewController`로 이동하는 기능 추가<br>- 쥬스 제작 완료 시 과일 레이블에 수량 표기 변경<br>- `JuiceMenu`에 `name` 연산 프로퍼티 추가<br>- 중복되는 액션 정리 및 `JuiceMenu`의 타입 `Int`로 지정<br>- 에러 처리 모델에서 컨트롤러로 이동<br>- 접근제한자 추가|
 |2023-05-17|- 상속이 필요없는 `class`에 `final` 키워드 추가<br>- 에러 종류에 맞는 `Alert` 생성 및 표시|
 |2023-05-18|- `JuiceMenu`의 타입 `Int`제거<br>- `Int`값으로 `JuiceMenu`를 얻는 메서드 `matchJuiceMenu`추가<br>- `setFruitStockLabel`의 에러 처리 제거, `nil 병합연산자` 활용하여 처리
-|2023-05-22|- 화면 이동을 위한 버튼 액션 추가<br>- `FruitViewController`의 `IBOutlet`, `IBAction` 연결<br>- `FruitViewDelegate` 추가<br>- `JuiceMakerViewController`에서 `FruitViewDelegate`채택 및 준수<br>- 과일 수량 변경 실패 에러 처리<br>- 싱글톤 `Aelrt`클래스 생성<br>- 모든 `showAlert` 메서드를 `Alert`을 이용하도록 변경<br>- `IBAction` 메서드들의 이름 변경<br>- 접근제한자, `final` 키워드 추가|
-|2023-05-24|- 클래스, 메서드, 파리미터명 변경<br>- `FruitStockDelegate` 별도 파일로 분리<br>- `FruitStockViewController`의 `fruitStock` 옵셔널 대신 기본값 지정<br>- 가독성 향상을 위해 `FruitStockDelegate`를 `extension`으로 추가<br>- 인터페이스 빌더 대신 뷰 컨트롤러를 이용해 버튼과 스탭퍼의 태그 지정<br>- `Alert`을 싱글톤에서 빌더 패턴으로 변경, `present`를 각 뷰 컨트롤러에서 담당하도록 변경|
-|2023-05-25|- 메서드명 오탈자 수정<br>- `JuiceMaker`에 과일 재고 조회, 수정 요청 메서드 추가<br>- `JuiceMakerViewController`에서 `JuiceMaker`의 `FruitStore` 의존성 제거<br>- 접근제한자 누락 수정|
+|2023-05-22|- 화면 이동을 위한 버튼 액션 추가<br>- `FruitViewController`의 `IBOutlet`, `IBAction` 연결<br>- `FruitViewDelegate` 추가<br>- `JuiceMakerViewController`에서 `FruitViewDelegate`채택 및 준수<br>- 과일 수량 변경 실패 에러 처리<br>- 싱글톤 `Aelrt`클래스 생성<br>- 모든 `showAlert` 메서드를 `Alert`을 이용하도록 변경<br>- 접근제한자, `final` 키워드 추가|
+|2023-05-24|- `FruitStockDelegate` 별도 파일로 분리<br>- `FruitStockViewController`의 `fruitStock` 옵셔널 대신 기본값 지정<br>- 가독성 향상을 위해 `FruitStockDelegate`를 `extension`으로 추가<br>- 인터페이스 빌더 대신 뷰 컨트롤러를 이용해 버튼과 스탭퍼의 태그 지정<br>- `Alert`을 싱글톤에서 빌더 패턴으로 변경, `present`를 각 뷰 컨트롤러에서 담당하도록 변경|
+|2023-05-25|- `JuiceMaker`에 과일 재고 조회, 수정 요청 메서드 추가<br>- `JuiceMakerViewController`에서 `JuiceMaker`의 `FruitStore` 의존성 제거<br>- 접근제한자 누락 수정|
 |2023-05-26|- `AlertBuilder`에 `setPreferredStyle`메서드 추가|
 
 </br>
@@ -52,12 +52,9 @@
 </br>
 
 # 💎 다이어그램
-<details>
-<summary>이미지 펼쳐 보기 / 닫기</summary>
 <div markdown="1">
     <img src="class_diagram.jpg" />
 </div>
-</details>
 
 
 
